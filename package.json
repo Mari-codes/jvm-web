@@ -11,7 +11,7 @@
     "format": "prettier \"src/**/*.{ts,tsx,js,jsx,json,css,md}\" --write"
   },
   "dependencies": {
-    "lucide-react": "^0.563.0",
+    "@iconify/react": "^6.0.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "styled-components": "^6.3.8"
