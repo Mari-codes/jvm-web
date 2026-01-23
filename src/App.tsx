@@ -1,11 +1,11 @@
-import { Example } from './components/Example';
-import { GlobalStyle } from './styles/GlobalStyle';
+import { HeroHeader } from "./components/HeroHeader";
+
 
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <Example />
+      <HeroHeader/>
+
     </>
   );
 }
