@@ -38,7 +38,13 @@ export const IconWrapper = styled.div<StyledButtonProps>`
   color: #0b4dbb;
 
 
-  
+  min-width: ${({ $widthSize }) => ($widthSize === "sm" ? "50px" : "100px")};
+  width: auto;
+  height: ${({ $heightSize }) => ($heightSize === "sm" ? "50px" : "100px")};
+
+  svg {
+    width: 55px;
+    height: 55px;}
   
 `;
 
