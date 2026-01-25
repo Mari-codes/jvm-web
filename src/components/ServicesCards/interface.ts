@@ -4,6 +4,11 @@ export interface ServiceCardProps {
   widthSize?: ButtonSize;
   heightSize?: ButtonSize;
   onClick?: () => void;
+
+  top?: boolean;
+  right?: boolean;
+  bottom?: boolean;
+  left?: boolean;
 }
 
-export type ButtonSize = "sm" | "md";
+export type ButtonSize = 'sm' | 'md';
