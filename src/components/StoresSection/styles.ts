@@ -5,7 +5,7 @@ export const StoresContainer = styled.section`
   position: relative;
   height: calc(640px * 0.8);
   background-color: #ffffff;
-  padding: 0px 135px 80px;;
+  padding: 0px 135px 80px;
   display: flex;
   align-items: flex-end;
 `;
