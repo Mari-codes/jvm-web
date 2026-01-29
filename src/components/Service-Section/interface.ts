@@ -1,6 +1,4 @@
-import type { ReactNode } from "react";
-
 export interface CircleBackgroundProps {
-  children: ReactNode;
-  bg?: string;
+  $bg?: string;
+  $secondary?: boolean;
 }
