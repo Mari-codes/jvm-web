@@ -30,7 +30,7 @@ export const CardWrapper = styled.div<BorderSides>`
 `;
 
 export const ButtonWrapper = styled.button`
-  color: #979797;
+  color: rgba(223, 226, 240, 1);
   font-weight: 400;
   cursor: pointer;
   margin: 15px;
