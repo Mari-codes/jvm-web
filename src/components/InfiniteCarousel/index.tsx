@@ -14,6 +14,7 @@ import {
   Container,
   Title,
 } from './styles';
+import { RevealOnScroll } from '../RevealOnScroll';
 
 export const InfiniteCarousel = () => {
   const images = [apointment, finished, goal, android, setup, treatment, week];
@@ -23,25 +24,27 @@ export const InfiniteCarousel = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <Container>
-      <Title>Nossos Projetos</Title>
-      <CarouselWrapper
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        <Track $isPaused={isPaused}>
-          {extendedImages.map((img, i) => (
-            <Item key={i}>
-              <ImageContainer
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-              >
-                <img src={img} alt={`Project ${i}`} draggable={false} />
-              </ImageContainer>
-            </Item>
-          ))}
-        </Track>
-      </CarouselWrapper>
-    </Container>
+    <RevealOnScroll>
+      <Container>
+        <Title>Nossos Projetos</Title>
+        <CarouselWrapper
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <Track $isPaused={isPaused}>
+            {extendedImages.map((img, i) => (
+              <Item key={i}>
+                <ImageContainer
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                >
+                  <img src={img} alt={`Project ${i}`} draggable={false} />
+                </ImageContainer>
+              </Item>
+            ))}
+          </Track>
+        </CarouselWrapper>
+      </Container>
+    </RevealOnScroll>
   );
 };

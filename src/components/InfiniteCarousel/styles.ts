@@ -2,8 +2,12 @@ import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const scroll = keyframes`
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-236px * 7)); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 `;
 
 export const Container = styled.section`
@@ -12,7 +16,7 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 32px;
+  font-size: clamp(20px, 4vw, 32px);
   color: #24282a;
   font-weight: 400;
   text-align: center;
@@ -28,14 +32,25 @@ export const CarouselWrapper = styled.div`
 
 export const Track = styled.div<{ $isPaused: boolean }>`
   display: flex;
-  animation: ${scroll} 25s linear infinite;
+  animation: ${scroll} 35s linear infinite;
   animation-play-state: ${(props) => (props.$isPaused ? 'paused' : 'running')};
-  will-change: transform;
+
+  @media (max-width: 768px) {
+    animation-duration: 40s;
+  }
+
+  @media (max-width: 510px) {
+    animation-duration: 45s;
+  }
+
+  @media (max-width: 3800px) {
+    animation-duration: 50s;
+  }
 `;
 
 export const Item = styled.div`
-  min-width: 236px;
-  height: 480px;
+  min-width: clamp(160px, 18vw, 236px);
+  height: clamp(290px, 40vw, 480px);
   padding: 0 10px;
   flex-shrink: 0;
 `;
@@ -43,7 +58,7 @@ export const Item = styled.div`
 export const ImageContainer = styled(motion.div)`
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: clamp(10px, 2vw, 20px);
   overflow: hidden;
   background: #ffffff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);

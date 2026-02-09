@@ -1,42 +1,57 @@
-import { Wrapper, Content, Actions, Rating, Header } from './styles';
+import { RevealOnScroll } from '../RevealOnScroll';
+import {
+  Wrapper,
+  Content,
+  Actions,
+  Rating,
+  Header,
+  Subtitle,
+  Title,
+  Description,
+  ActionButton,
+  Caption,
+  Star,
+  Stars,
+  CaptionSubtitle,
+  CaptionTitle,
+} from './styles';
 
 export const HeroSection = () => {
   return (
-    <Wrapper>
-      <Content>
-        <Header>
-          <span>Nosso time</span>
-          <h1>JVM Launchpad</h1>
-        </Header>
-
-
-        <p>
-          Na JVM, investimos em pessoas, processos e aprendizado constante. Por
-          meio do JVM Launchpad, capacitamos desenvolvedores e designers para
-          atuar em projetos reais, sempre guiados por especialistas e orientados
-          a resultados para nossos clientes.
-        </p>
-
-        <Actions>
-          <button className="primary">Entrar em contato</button>
-          <button className="secondary">Conhecer o Launchpad</button>
-        </Actions>
-
-        <Rating>
-          <div className="stars">
-            <span>⭐</span>
-            <span>⭐</span>
-            <span>⭐</span>
-            <span>⭐</span>
-            <span>⭐</span>
-          </div>
-
-          <figcaption>
-            <strong>Serviço eficiente e filantrópico</strong>
-            <span>Totalmente completo</span>
-          </figcaption>
-        </Rating>
-      </Content>
-    </Wrapper>
+    <RevealOnScroll direction="up">
+      <Wrapper>
+        <Content>
+          <Header>
+            <Subtitle>Nosso time</Subtitle>
+            <Title>JVM Launchpad</Title>
+          </Header>
+          <Description>
+            Na JVM, investimos em pessoas, processos e aprendizado constante.
+            Por meio do JVM Launchpad, capacitamos desenvolvedores e designers
+            para atuar em projetos reais, sempre guiados por especialistas e
+            orientados a resultados para nossos clientes.
+          </Description>
+          <Actions>
+            <ActionButton $variant="primary">Entrar em contato</ActionButton>
+            <ActionButton $variant="secondary">
+              Conhecer o Launchpad
+            </ActionButton>
+          </Actions>
+          <Rating>
+            <Stars aria-label="Avaliação: 5 de 5 estrelas">
+              <Star icon="fa-solid:star" />
+              <Star icon="fa-solid:star" />
+              <Star icon="fa-solid:star" />
+              <Star icon="fa-solid:star" />
+              <Star icon="fa-solid:star" />
+            </Stars>
+            <Caption>
+              <CaptionTitle>Serviço eficiente e filantrópico</CaptionTitle>
+              <CaptionSubtitle>Totalmente completo</CaptionSubtitle>
+            </Caption>
+          </Rating>
+        </Content>
+      </Wrapper>
+    </RevealOnScroll>
   );
 };

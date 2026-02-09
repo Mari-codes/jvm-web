@@ -1,11 +1,20 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const SectionWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   color: #000;
-  gap: 32px;
+  gap: 80px;
   flex-wrap: wrap;
+  padding: 70px 0 200px;
+
+  @media (max-width: 950px) {
+    padding: 70px 0px 100px;
+  }
+
+  @media (max-width: 510px) {
+    padding: 70px 0px 60px;
+  }
 `;
 
 export const ServiceCard = styled.div`
@@ -14,26 +23,25 @@ export const ServiceCard = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
   margin: 16px 0 8px 0;
   color: #000;
 `;
 
 export const Description = styled.p`
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(14px, 2.2vw, 16px);
   margin: 0;
-  color: #939FA4;
+  color: #939fa4;
 `;
-
 
 export const StyledCircle = styled.div<{ $bg?: string; $secondary?: boolean }>`
   background: ${({ $secondary, $bg }) =>
-    $secondary ? "#fff" : $bg || "linear-gradient(180deg, #232a34 0%, #4e54c8 100%)"};
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+    $secondary
+      ? '#fff'
+      : $bg || 'linear-gradient(180deg, #232a34 0%, #4e54c8 100%)'};
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.18);
   border-radius: 50%;
   width: 90px;
   height: 90px;
@@ -44,6 +52,6 @@ export const StyledCircle = styled.div<{ $bg?: string; $secondary?: boolean }>`
   ${({ $secondary }) =>
     $secondary &&
     css`
-      border: 0.5px solid #DBE0EF;
+      border: 0.5px solid #dbe0ef;
     `}
 `;

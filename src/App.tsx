@@ -1,11 +1,11 @@
-import { Example } from './components/Example';
+import { Home } from './pages/Home';
 import { GlobalStyle } from './styles/GlobalStyle';
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Example />
+      <Home />
     </>
   );
 }
