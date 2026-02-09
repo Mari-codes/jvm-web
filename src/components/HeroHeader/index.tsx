@@ -1,48 +1,38 @@
-import { Anchor } from '../Anchor';
+import { Header } from '../Header';
+import cellphone from '../../assets/img/celphone.png';
 import {
-  HearoHeaderContentWrapper,
-  HeroHeaderImageContent,
-  HeroHeaderLogo,
-  HeroHeaderLogoWrapper,
-  HeroHeaderNav,
-  HeroHeaderNavWrapper,
-  HeroHeaderTextContent,
+  Description,
+  HeaderContent,
   HeroHeaderWrapper,
   HeroHeaderWrapperButtons,
-  HeroHeaderWrapperImageContent,
+  HeroImage,
+  LeftContent,
+  Title,
 } from './styles';
+import { Anchor } from '../Anchor';
+import { RevealOnScroll } from '../RevealOnScroll';
 
-export function HeroHeader() {
+export const HeroHeader = () => {
   return (
     <HeroHeaderWrapper>
-      <HeroHeaderNavWrapper>
-        <HeroHeaderLogoWrapper>
-          <HeroHeaderLogo />
-          <p>JVM WEBMARKETING</p>
-        </HeroHeaderLogoWrapper>
-
-        <HeroHeaderNav>
-          <Anchor text="Serviços" />
-          <Anchor text="Projetos" />
-          <Anchor text="Blog" />
-          <Anchor text="Contato" $variant="secondary" />
-        </HeroHeaderNav>
-      </HeroHeaderNavWrapper>
-
-      <HearoHeaderContentWrapper>
-        <HeroHeaderTextContent>
-          <h1>Sua solução WEB.</h1>
-          <p>Plataformas exclusivas, funcionais e de alto desempenho.</p>
-          <HeroHeaderWrapperButtons>
-            <Anchor text="Portfólio" $variant="tertiary" />
-            <Anchor text="Contato" $variant="quaternary" />
-          </HeroHeaderWrapperButtons>
-        </HeroHeaderTextContent>
-
-        <HeroHeaderWrapperImageContent>
-          <HeroHeaderImageContent />
-        </HeroHeaderWrapperImageContent>
-      </HearoHeaderContentWrapper>
+      <Header />
+      <HeaderContent>
+        <RevealOnScroll direction="left">
+          <LeftContent>
+            <Title>Sua solução WEB.</Title>
+            <Description>
+              Plataformas exclusivas, funcionais e de alto desempenho.
+            </Description>
+            <HeroHeaderWrapperButtons>
+              <Anchor text="Portfólio" $variant="tertiary" />
+              <Anchor text="Contato" $variant="quaternary" />
+            </HeroHeaderWrapperButtons>
+          </LeftContent>
+        </RevealOnScroll>
+        <RevealOnScroll direction="right">
+          <HeroImage src={cellphone} alt="" />
+        </RevealOnScroll>
+      </HeaderContent>
     </HeroHeaderWrapper>
   );
-}
+};

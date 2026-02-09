@@ -1,4 +1,4 @@
 export interface LogoProps {
-  w: number;
-  h: number;
+  $w: number;
+  $h: number;
 }

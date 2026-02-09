@@ -5,5 +5,5 @@ export interface IAnchor extends React.DetailedHTMLProps<
   HTMLAnchorElement
 > {
   text: string;
-  $variant?: 'secondary' | 'tertiary' | 'quaternary';
+  $variant?: 'secondary' | 'tertiary' | 'quaternary' | 'nav';
 }

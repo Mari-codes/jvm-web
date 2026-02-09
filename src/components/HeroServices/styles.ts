@@ -4,25 +4,30 @@ export const WrapperHeroSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 520px;
-  margin: 50px;
+  margin-top: 40px;
   background-color: transparent;
+
+  @media (max-width: 950px) {
+    margin-top: 30px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
-  width: 425px;
+  max-width: 425px;
+  min-width: 300px;
+  width: 100%;
 `;
 
 export const TitleWrapper = styled.h2`
   margin: 0;
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 20px);
   color: #2f2f2f;
   font-weight: 200;
 `;
 
 export const SubTitleWrapper = styled.h2`
   margin: 0;
-  font-size: 42px;
+  font-size: clamp(24px, 4.5vw, 42px);
   line-height: 1.4;
   color: #2f2f2f;
   font-weight: 200;
@@ -30,7 +35,7 @@ export const SubTitleWrapper = styled.h2`
 
 export const ParagraphWrapper = styled.p`
   margin-top: 12px;
-  font-size: 15px;
+  font-size: clamp(14px, 2.2vw, 15px);
   line-height: 1.6;
   color: rgba(96, 101, 103, 1);
   font-weight: 300;
