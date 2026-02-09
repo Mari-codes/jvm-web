@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import image from '../../assets/img/image.png';
+import image from '../../assets/img/meeting.png';
 import { Icon } from '@iconify/react';
 
 export const Wrapper = styled.section`
