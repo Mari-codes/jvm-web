@@ -8,7 +8,7 @@ import {
   TopIcon,
   TopIconWrapper,
 } from './styles';
-import iphone from '../../assets/img/iPhone.png';
+import iphone from '../../assets/img/iphone.png';
 import { IconWithLabel } from '../IconWithLabel';
 import { RevealOnScroll } from '../RevealOnScroll';
 
