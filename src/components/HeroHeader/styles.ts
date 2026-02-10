@@ -56,7 +56,7 @@ export const LeftContent = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: clamp(28px, 6vw, 96px);
+  font-size: clamp(26px, 6vw, 96px);
   margin-bottom: 56px;
 
   @media (max-width: 950px) {
@@ -64,7 +64,7 @@ export const Title = styled.h1`
   }
 `;
 export const Description = styled.p`
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(16px, 2vw, 20px);
   margin-bottom: 52px;
 
   @media (max-width: 950px) {

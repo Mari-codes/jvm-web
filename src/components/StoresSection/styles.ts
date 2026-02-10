@@ -101,7 +101,7 @@ export const Span = styled.span`
 
 export const StoresDescription = styled.div`
   color: #939fa4;
-  font-size: 18px;
+  font-size: 16px;
   width: 570px;
 
   @media (max-width: 1340px) {

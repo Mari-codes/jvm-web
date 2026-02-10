@@ -11,7 +11,7 @@ const scroll = keyframes`
 `;
 
 export const Container = styled.section`
-  padding: 30px 0px 61px;
+  padding: 50px 0px 20px;
   width: 100%;
 `;
 

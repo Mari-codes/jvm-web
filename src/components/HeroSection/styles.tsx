@@ -51,7 +51,7 @@ export const Wrapper = styled.section`
   }
 
   @media (max-width: 480px) {
-    margin: 30px 20px;
+    margin: 0px 20px 60px;
     padding: 30px;
   }
 `;

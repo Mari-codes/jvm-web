@@ -13,17 +13,13 @@ export const HeroWrapper = styled.div`
   }
 
   @media (max-width: 1154px) {
-    padding: 44px 40px;
+    padding: 54px 40px;
   }
 
   @media (max-width: 920px) {
     flex-direction: column;
-    gap: 50px;
+    gap: 0px;
     align-items: center;
-  }
-
-  @media (max-width: 480px) {
-    padding: 30px 20px;
   }
 `;
 
@@ -31,6 +27,7 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 20px;
 `;
 
 export const LeftWrapper = styled.div`
