@@ -19,7 +19,7 @@ import { RevealOnScroll } from '../RevealOnScroll';
 export const InfiniteCarousel = () => {
   const images = [apointment, finished, goal, android, setup, treatment, week];
 
-  const extendedImages = [...images, ...images];
+  const extendedImages = [...images, ...images, ...images];
 
   const [isPaused, setIsPaused] = useState(false);
 
