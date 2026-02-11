@@ -11,6 +11,7 @@ import {
 } from './styles';
 
 function Footer() {
+  const actuallyYear = new Date().getFullYear()
   return (
     <>
       <Divider />
@@ -48,7 +49,7 @@ function Footer() {
         </LinkArea>
         <Copyright>
           <CopyrightText>
-            © Copyright 2022 — All rights reserved — JVM by Kallarari
+            © Copyright {actuallyYear} — All rights reserved — JVM by Kallarari
           </CopyrightText>
         </Copyright>
       </FooterWrapper>
